@@ -10,9 +10,27 @@
     <body>
         <!--<iframe src="https://open.spotify.com/embed/album/3oNO1P0Qlr4oSlMA2MIj67" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
         <script>
-            fetch('https://api.spotify.com/v1/search?q=tag:hipster&type=album&limit=1')
+            const Url = 'https://accounts.spoitfy.com/api/token';
+            
+            const param = {
+                headers:{
+                    "Authorization": "Basic" + "c5d4762aefc2460ba0648363efbb0cd7:5323c99219f8448d845ffeb9b06bcde9"
+                },
+                body:{
+                    grant_type=client_credentials.
+                method:"POST"
+            };
+                
+            fetch(Url, param)
+                .then(data=>{return data.json()})
+                .then(res=>{console.log(res)})
+                .catch(error=>console.log(error))
+            /*  
+            fetch('https://api.spotify.com/v1/search?q=tag:hipster&type=album&limit=1', {
+                headers: new Headers({
+                    'Authorization': )
                 .then(response => {console.log})
-            /*
+            
             const express = require('express')
             const axios = require('axios')
             const app = express()
