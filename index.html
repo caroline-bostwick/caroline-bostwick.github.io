@@ -8,8 +8,10 @@
         <!--<link rel="stylesheet" href="main.css"> -->
     </head>
     <body>
-        <iframe src="https://open.spotify.com/embed/album/3oNO1P0Qlr4oSlMA2MIj67" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <!--<iframe src="https://open.spotify.com/embed/album/3oNO1P0Qlr4oSlMA2MIj67" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
         <script>
+            fetch('https://api.spotify.com/v1/search?q=tag:hipster&type=album&limit=1')
+                .then(response => {console.log})
             /*
             const express = require('express')
             const axios = require('axios')
