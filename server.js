@@ -23,7 +23,7 @@ spotifyApi.clientCredentialsGrant()
   console.log('Something went wrong when retrieving an cess token', err.message);
 });
 
-app.get('', function (request, response) {
+app.get('/', function (request, response) {
 
   spotifyApi.searchTracks('track:Dancing Queen', {limit:1})
       .then(function(data) {
