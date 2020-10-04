@@ -38,7 +38,7 @@
             app.get('/myendpoint', function (request, response) {
                 
                 spotifyApi.searchTracks('track:Dancing Queen', {limit:1})
-                    .then(functioin(data) {
+                    .then(function(data) {
                     
                     response.send(data.body.tracks.items[0]);
                 
