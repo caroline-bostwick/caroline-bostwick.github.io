@@ -4,7 +4,7 @@ var app = express();
 app.use(express.static('public'));
 
 app.get("/", function (request, response) {
-  response.sendFile(__dirname);
+  response.sendFile(__dirname + '/index.html');
 });
 
 var SpotifyWebApi = require('spotify-web-api-node');
