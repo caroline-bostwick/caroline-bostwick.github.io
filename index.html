@@ -1,61 +1,131 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Gems of Spotify</title>
-        <meta name="description" content="Finding unpopular albums from Spotify">
-        <!--<link rel="stylesheet" href="main.css"> -->
-    </head>
-    <body>
-        <!--<iframe src="https://open.spotify.com/embed/album/3oNO1P0Qlr4oSlMA2MIj67" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
-        <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-        <script src="/client.js"></script>
-       
-        <!--<script>
-            const Url = 'https://accounts.spotify.com/api/token';
-            
-            const param = {
-                headers:{
-                    "Authorization": "Basic" + "c5d4762aefc2460ba0648363efbb0cd7:5323c99219f8448d845ffeb9b06bcde9"
-                },
-                body:{
-                    "grant_type":"client_credentials"
-                },
-                method:"POST"
-            };
-                
-            fetch(Url, param)
-                .then(data=>{return data.json()})
-                .then(res=>{console.log(res)})
-                .catch(error=>console.log(error))
-            
-            fetch('https://api.spotify.com/v1/search?q=tag:hipster&type=album&limit=1', {
-                headers: new Headers({
-                    'Authorization': )
-                .then(response => {console.log})
-            
-            const express = require('express')
-            const axios = require('axios')
-            const app = express()
-            const port = 3000
-            app.get('/gem', (req, res) => {
-                let random = Math.floor(5000 * Math.random());
-                let url = "https://api.spotify.com/v1/search?q=tag:hipster&type=album&limit=1&offset=" + random
-                let token = "BQDMqbZtWavZdp3jY4pX6-fmdmkcJRGa_N67-Nl0tOJTCyhhWKAGovpoWHj7_pM-xzV3ZlUXZlZlC1ICfDvTVnqMSvn9lQZJhcNVX0ttANNw0K715bxn2Ymqwm7uF4oJPpF3LvG2z6icHmmqKijyaieMQhNYZBMOb42mKFS36vY"
-                axios.get(url, {
-                    headers: {
-                        "Authorization": "Bearer " + token
-                    }
-                }).then((data) => {
-                    console.log(data)
-                    res.send(JSON.stringify(data.data));
-                }).catch((e) => res.send(e));
-            });
+<!doctype html>
+<html lang="en">
 
-            app.listen(8080)
-        </script>-->
-    </body>
+<!--
+WRITTEN BY: Caroline Bostwick
+EMAIL: cbostwic@uci.edu
+-->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Caroline Bostwick">
+  <meta name="description" content="Caroline Bostwick's Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+   <!-- you would link to an external stylesheet here! -->
+   <link rel="stylesheet" href="mystyle.css">
+   <!--Google Fonts-->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans+Condensed:wght@700&display=swap">
+      <!--Icons-->
+    <script src="https://kit.fontawesome.com/9e24a3390a.js" crossorigin="anonymous"></script>
+  <title>Caroline Bostwick's Portfolio</title>
+</head>
+<body>
+  <div class="heading1">
+    <h1>
+      CAROLINE BOSTWICK
+    </h1>
+  </div>
+<!--Top Navigation-->
+  <div class="topnav" id="myTopnav">
+    <nav>
+      <ul>
+        <!--<li><a href="#Home">Home</a></li> -->
+        <li><a href="#About-Me">About Me</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Relevant-Coursework">Relevant Coursework</a></li>
+        <li><a href="#Contact-Me">Contact Me</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!--About Me section with profile picture and bio-->
+  <a id="About-Me"><h2>About Me</h2></a>
+<div class="Group">
+    <img src="images/IMG_8860.jpeg" id="profile-pic" alt="Photo of Caroline Bostwick" width="225" height="300">
+    <p>
+      My name is Caroline Bostwick and I am a 4th year computer science student at UC Irvine.
+      I'm passionate about making software that is inclusive to everyone.
+    </p>
+</div>
+
+<!--First project with picture and description-->
+<a id="Projects"><h2>Projects</h2></a>
+<div class="container">
+  <div class="image">
+    <img src="images/WebCrawler.png" alt="Photo of search engine user interface" width="400" height="240">
+    </div>
+    <div class="text">
+      <h3>Web Crawler</h3>
+    <p>Wrote a search engine in Python from the ground up capable of handling tens of thousands of documents or Web pages under harsh operational constraints. Query time was under 300ms.</p>
+  </div>
+</div>
+
+<!--Second project with picture and description-->
+<div class="container">
+  <div class="image">
+    <img src="images/GetUp2.png" alt="Photo of health app showing scheduling, statistics of activities, and user preferences." width="400" height="200">
+    </div>
+    <div class="text">
+      <h3>Get Up!</h3>
+    <p>Integrates the Google Calendar and OpenWeather API to schedule wellness activities based on a user's availability, weather, and activity preferences.
+  </div>
+</div>
+
+<!--Table for coursework-->
+<a id="Relevant-Coursework"><h2>Relevant Coursework</h2></a>
+<div class = "Group">
+  <table>
+    <tr>
+      <th>Course</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>ICS 46</td>
+      <td>Data Structure Implementation and Analysis</td>
+    </tr>
+    <tr>
+      <td>COMPSCI 178</td>
+      <td>Machine Learning and Data-Mining</td>
+    </tr>
+    <tr>
+      <td>COMPSCI 122A</td>
+      <td>Principles of Data Management</td>
+    </tr>
+    <tr>
+      <td>COMPSCI 125</td>
+      <td>Next Generation Search Systems</td>
+    </tr>
+    <tr>
+      <td>COMPSCI 161</td>
+      <td>Design and Analysis of Algorithms</td>
+    </tr>
+    <tr>
+      <td>COMPSCI 121</td>
+      <td>Information Retrieval</td>
+    </tr>
+    <tr>
+      <td>COMPSCI 121</td>
+      <td>Information Retrieval</td>
+    </tr>
+    <tr>
+      <td>COMPSCI 165</td>
+      <td>Project in Algorithms and Data Structures</td>
+    </tr>
+    <tr>
+      <td>INFORMATICS 113</td>
+      <td>Requirements Analysis and Engineering</td>
+    </tr>
+  </table>
+</div>
+
+<!--Contact Me With Icons-->
+<div class = "Group">
+<a id="Contact-Me"><h2>Contact Me</h2></a>
+<div class='contact-icons'>
+  <a href="mailto:cbostwic@uci.edu" title="Email me."> <em class="fas fa-envelope fa-5x" style="color:gray;"></em></a>
+  <a href="https://www.linkedin.com/in/caroline-bostwick/" title="Caroline's LinkedIn Page"> <em class="fab fa-linkedin fa-5x" style="color:#0072b1"></em></a>
+</div>
+</div>
+
+</body>
 </html>

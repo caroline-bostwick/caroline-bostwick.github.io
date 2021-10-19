@@ -1,105 +1,150 @@
-/* styles */
-/* called by your view template */
+  /*heading1*/
+  h1 {
+    color: #7161EF;
+    text-align: center;
+    background-color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 5em;
+    /*text-shadow: 3px 3px 3px #ababab;*/
+  }
+  /*heading2*/
+  h2
+  {
+    color: #673DA8;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 45px;
+    margin-top: .3em;
+    margin-bottom: .3em;
+  }
 
-/* You might want to try something fancier: */
-/* less: http://lesscss.org/ */
+  /*heading3*/
+  h3
+  {
+    color: #673DA8;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    /*margin-top: .3em;
+    margin-bottom: .3em;*/
+  }
 
-* {
-  box-sizing: border-box;
+  /* Navigation color */
+  ul {
+      list-style-type :none;
+      margin: auto;
+      padding: 0;
+      overflow: hidden;
+      background-color: #673DA8;
+      font-family: 'Open Sans Condensed', sans-serif;
+      /*color: white;*/
+  }
+
+  /*each list item*/
+  li {
+    float: left;
+    border: 1px solid #bbb;
+    text-align: center;
+  }
+
+  /* Each list item in navigation */
+  li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 8px 16px;
+      text-decoration: none;
+      margin: auto;
+      font-size: 25px;
+  }
+
+  /* Changes color when hovering over not active tab*/
+  li a:hover:not(.active) {
+    background-color: white;
+    color: #555;
+  }
+
+  /*background white*/
+    body {
+      background-color: white;
+    }
+
+    /*all div styles*/
+    .Group {
+      width: 70%;
+      padding: 1em;
+      margin-bottom: 2em;
+      margin-top: .5em;
+      margin-left:auto;
+      margin-right:auto;
+      display:block;
+      background-color: #DEC0F1;
+    }
+
+    /*keeping images inline*/
+img {
+  display: inline;
 }
 
-body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 25px;
+/*paragraph*/
+p{
+  font-family: 'Merriweather', serif;
+  text-align: center;
 }
 
-h1 {
-  font-weight: bold;
-  color: #1ED760;
+/*containers for project side by side*/
+.container
+{
+  width: 70%;
+  padding: 1em;
+  margin-bottom: 2em;
+  margin-top: .5em;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  background-color: #DEC0F1;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.bold {
-  font-weight: bold;
-}
-
-p {
-  max-width: 600px;
-}
-
-form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: #1E3264;
-  color: #FF6437;
-  display: inline-block;
-  width: 100%;
-  max-width: 340px;
-  border-radius: 3px;
-}
-
-input {
+/*centering profile picture*/
+#profile-pic
+{
   display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input[type="checkbox"] {
-  display: inline-block;
-  width: auto;
+/*fitting the table*/
+table{
+  font-family: 'Merriweather', serif;
+  margin-left: auto;
+  margin-right:auto;
+  width: 65%;
 }
 
-label {
-  margin-right: 10px;
+/*center the icons at the contact me*/
+.contact-icons
+{
+  text-align: center;
+  vertical-align: baseline;
 }
 
-button {
-  font-size: 16px;
-  border-radius: 3px;
-  background-color: #1E3264;
-  border: 1px solid #FF6437;
-  box-shadow: 2px 2px #FF6437;
-  cursor: pointer;
-  width: 100px;
-  height: 40px;
-  margin: 20px 0;
-}
-
-a button {
-  color: white;
-  text-decoration: none;
-}
-
-button:hover {
-  background-color: #FF6437;
-}
-
-button:active {
-  box-shadow: none;
-}
-
-li {
-  margin-bottom: 5px;
-}
-
-footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
-}
-
-footer > a {
-  color: #1ED760;
-}
-
-.nicejob {
-  text-decoration: line-through;
-}
-
-#albumart {
-  width: 200px;
-  display: block;
+/*for mobile screens*/
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: inline-block;
+  }
+  .container {
+    width: 90%;
+    display:block;
+  }
+  img {
+    max-width: 90%;
+  }
+  .Group {
+    max-width: 90%;
+  }
 }
